@@ -18,7 +18,7 @@ libraryDependencies += "com.lihaoyi" %%% "utest" % "0.3.0" % "test"
 testFrameworks += new TestFramework("utest.runner.Framework")
 
 // ScalaTest settings
-libraryDependencies += "org.scalatest" %%% "scalatest" % "3.0.0-RC4" % "test"
+libraryDependencies += "org.scalatest" %%% "scalatest" % "3.0.0" % "test"
 
 persistLauncher in Compile := true
 persistLauncher in Test := false
