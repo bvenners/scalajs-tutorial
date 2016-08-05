@@ -4,18 +4,18 @@ import org.scalatest._
 
 import org.scalajs.jquery.jQuery
 
-class TutorialTestWithScalaTest extends FunSpec {
+class TutorialSpec extends FunSpec {
 
   // Initialize App
   TutorialApp.setupUI()
 
-  describe("TutorialApp") {
+  describe("The TutorialApp") {
 
-    it("should contains 'Hello Word' text in its body") {
+    it("""should contain "Hello Word" text in its body""") {
       assert(jQuery("p:contains('Hello World')").length == 1)
     }
 
-    it("should append 'You clicked the button!' text when user click on the 'Click me!' button") {
+    it("""should append "You clicked the button!" when the user clicks on the "Click me!" button""") {
       def messageCount =
         jQuery("p:contains('You clicked the button!')").length
 
@@ -28,6 +28,5 @@ class TutorialTestWithScalaTest extends FunSpec {
         assert(messageCount == c)
       }
     }
-
   }
 }
